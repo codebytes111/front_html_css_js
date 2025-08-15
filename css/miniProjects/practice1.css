@@ -1,0 +1,9 @@
+ /*inline > Internal > External */
+ /* the external feels superior to internal when any tag is not called directly.so its better to call the tag directly in internal.*/
+ /*if we didn't call directly in internal...then the external may call that tag directly and it can take out the kingdoms.*/
+ /*Even though the selector taken is same...if an internal or external which is written last wins.*/
+ p {color:blue;}
+ .container{color:darkorange}
+ #id p {color:crimson}
+ h2{color:wheat;}
+ #first,#second{color:magenta;}

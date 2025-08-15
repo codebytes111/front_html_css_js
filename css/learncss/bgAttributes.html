@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>box model</title>
+    <style>
+        /* *{
+            margin:0px;
+            padding:0px;
+
+        } */
+/* if used thr above code the content starts without gap in webpage. */
+        .box{
+            height: 300px;
+            width: 500px;
+            background-attachment:fixed;
+        }
+        #box1{
+            color:rgb(223, 20, 54);
+            background-color:yellow;
+            background-image:url(../../html/projects/images/jennie.jpeg);
+            background-position:20px 50px; 
+            background-size:contains; /*contains means the background repeats*/
+            background-repeat:no-repeat;
+          
+            background-origin:content-box;
+            /* repeat is needed for contain as the image gets repeated.*/
+            /* visibility: hidden; it is used to hide . */
+        }
+        #box2{
+            color:rgb(255, 16, 179);
+            background-color:blue;
+            background-image:url(../../html/projects/images/blacpink.jpeg);
+            background-position:200px 50px ;
+            background-size: contains; /*cover means zoom photo to fit. */
+            background-repeat:repeat;/* repeat is not needed with cover*/
+            /* background-origin: content-box;
+       background-clip:border-box ; */
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Box1</div><br>
+    <div id="box2" class="box">Box2</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit.java" method="post">
+        name:<input type="text" placeholder="name" required><br>
+        pass:<input type="password" placeholder="password"><br>
+        <input type="submit">
+        <hr>
+        <label for="username">Unsername</label>
+        <input type="text" name="user" value="username" name="username" id="name" ><br>
+        <label for="Pass">password</label>
+        <input type="password" placeholder="enter pass" value="pass">
+        <input type="submit">
+        <br>
+        <hr>
+        <hr>
+        Date:<input type="date">
+        <br><br>
+        file:<input type="file"><br>
+        color:<input type="color"><br>
+        price range:<input type="range"><br>
+        button:<input type="button" value="poke me">
+        submit:<input type="submit">
+        <br>
+        <br>
+        <label for="m">Male:</label>
+        <input type="radio" name="gender" id="m" value="male" >
+        <label for="f">female:</label>
+        <input type="radio" name="gender" id="f" value="female" checked><br>
+Namey:<input type="text" name="n" value="jin" placeholder="enter name" required maxlength="10" minlength="3" autocomplete disable readonly>
+<br>
+<label for="c">C</label>
+<input type="checkbox" name="checkbox" value="c" id="c" checked><br>
+<label for="'j">Java</label>
+<input type="checkbox" name="checkbox" value="java" id="j" unchecked><br>
+<label for="k">kotlin</label>
+<input type="checkbox" name="checkbox" value="kotlin" id="k">
+<br>
+<label for="fruit">choose a fruit:</label>
+<select name="fruit" id="fruit" placeholder="apple" multiple size="2">
+    <option value="apple">Apple</option>
+    <option value="banana" selected>Banana</option>
+    <option value="watermelon">watermelon</option>
+</select>
+<br>
+<textarea name="text" id="text" rows="4" cols="40" placeholder="enter your job description."></textarea>
+    </form>
+</body>
+</html>

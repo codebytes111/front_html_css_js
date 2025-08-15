@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotify Downloader - Download Spotify songs, playlists, and albums</title>
+    <meta name="description" content="A Spotify Downloader that let's you download songs, albums, and playlists from Spotify in MP3. It can also download the full album or playlist as ZIP.">
+    <meta name="keywords" content="spotify downloader, spotify downloader mp3, spotify download mp3, download spotify songs, download spotify playlist, download spotify album, spotify playlist downloader, spotify to mp3, spotify 320kbps mp3 download, free spotify downloader, spotify download, spotify mp3 downloader">
+    <meta name="image" content="https://spotdownloader.com/screenshot.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Spotify Downloader">
+    <meta property="og:description" content="Download songs, albums and playlists from Spotify instantly.">
+    <meta property="og:image" content="https://spotdownloader.com/screenshot.jpg">
+    <meta property="og:url" content="https://spotdownloader.com">
+    <meta name="twitter:title" content="Spotify Downloader">
+    <meta name="twitter:description" content="Download songs, albums and playlists from Spotify instantly.">
+    <meta name="twitter:image" content="https://spotdownloader.com/screenshot.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/main.css?v=26">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2014943074513391" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YWW7K08RWF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YWW7K08RWF');
+    </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+</head>
+
+<body>
+    <header class="container">
+        <hgroup>
+            <h1>Spotify downloader</h1>
+            <h2>Download tracks, albums and playlists from Spotify instantly.</h2>
+        </hgroup>
+        <!-- sd -->
+        <ins class="adsbygoogle banner-ad" style="display:block;" data-ad-client="ca-pub-2014943074513391" data-ad-slot="3092076625" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </header>
+    <main class="container">
+        <section id="downloader">
+            <h2>Enter link</h2>
+            <p>Enter a Spotify link that you would like to download tracks from. Artist &amp; podcast links aren't supported.</p>
+            <input type="text" id="link" placeholder="Example: https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8" value="https://open.spotify.com/playlist/20qc2TEShaQKMutv8qb1gf" aria-invalid="false">
+            <button type="submit" id="submit">Submit</button>
+            <div id="loader" class="hidden" aria-busy="true"></div>
+            <div id="result" class="hidden"></div>
+            <div id="close" class="hidden"></div>
+        </section>
+        <!-- sd -->
+        <ins class="adsbygoogle banner-ad" style="display:block" data-ad-client="ca-pub-2014943074513391" data-ad-slot="3092076625" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <section>
+            <h2>What's this?</h2>
+            <p>A simple web tool that allows you to download songs from Spotify. You can download a song either by entering a track, album, or playlist link. You can also download the entire album or playlist in ZIP format. It also adds all the metadata
+                like cover image, artists, and release date in the downloaded songs. Show, Podcast, and Artist page links aren't supported yet.</p>
+            <p>Note: We don't host any copyrighted material. We use 3rd parties to serve our users with the materials they desire. We aren't supposed to be held responsible for anything.</p>
+        </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Downloads Spotify songs.</li>
+                <li>Downloads Spotify albums.</li>
+                <li>Downloads Spotify playlists.</li>
+                <li>Downloads as 320kbps MP3.</li>
+                <li>Puts all the metadata in the downloaded MP3.</li>
+                <li>Downloads full album/playlist in ZIP.</li>
+                <li>Fastest Spotify downloader!</li>
+                <li>Runs in the browser, no need to install anything!</li>
+            </ul>
+        </section>
+        <section>
+            <h2>How to use?</h2>
+            <ol>
+                <li>Open your Spotify app.</li>
+                <li>Find the track, album or playlist you would like to download.</li>
+                <li>Click the "3 dots".</li>
+                <li>Select "Share" and click on "Copy link".</li>
+                <li>Paste the link above and click "Submit".</li>
+                <li>Wait for the tool to process.</li>
+                <li>Click the "Download" button below a track you would like to download. <br>Or click "Download ZIP" button to download the full album or playlist.</li>
+            </ol>
+            <img src="download_playlist.jpg" alt="Getting Spotify playlist link" title="Getting Spotify playlist link" width="551" height="370">
+            <img src="download_track.jpg" alt="Getting Spotify track link" title="Getting Spotify track link" width="518" height="426">
+        </section>
+        <section>
+            <h2>About SpotifyDownloader</h2>
+            <p>If you are looking for a method to download songs and playlists from Spotify at the highest possible quality, you have come to the right place. This tool basically does that. SpotifyDownloader allows you to download any Spotify song or playlist
+                of your choice with a single click! No techincal knowledge is required to use this incredible tool. No need to even install anything. Everything happens inside your web browser fully automatedly. We provide the fastest download speeds
+                too. Our Spotify playlist downloader lets you download dozens of songs in a ZIP file with just a single click! All you need to do is paste the link of the song that you want to save as MP3 and hit the download button.</p>
+            <p>On top of all that, we also provide the best MP3 quality at blazing-fast speed. The conversion time for songs is mere seconds. You can instantly convert and save any song you want at a super fast download speed. We also don't have any rate
+                limit. That means that you can download an unlimited number of songs without any restrictions totally for free!</p>
+            <h2>Best features of SpotifyDownloader</h2>
+            <p>SpotifyDownloader is the fastest song downloader in the entire market. It is also the only tool that lets you download full playlists and albums as ZIP with a single click. No other tool in the market is capable of doing that. Our tool is
+                so advanced and fast that we don't limit how many songs you can download. You can download as many songs as you want to without getting rate-limited!</p>
+            <p>The songs are downloaded in the highest quality MP3. MP3 is the most popular audio format on the planet. You can play the downloaded songs anywhere you want. Your iPod, PC, Home theatre, mobile devices, everywhere! We provide MP3 at the highest
+                bitrate of 320bkps. With our SpotifyDownloader you get to save any song you desire in that top-notch quality.</p>
+            <p>We provide the fastest download speeds. Instantly convert and save songs without any waiting time. Our top-notch servers have your back! We also don't serve any bad ADs or random popups that ruin user experience.</p>
+            <p>Our tool adds all the important metadata into the downloaded MP3 files. Metadata are attributes like song author, release date, album, and cover art that describe an audio file. SpotifyDownloader takes care of having all that information included
+                correctly into the downloaded files. Metadata are needed by audio players display information about a track. It also allows audio players to group songs by their characteristics.</p>
+            <p>Downloading Spotify songs has much more benefits. You can listen to them continuously without getting interrupted by ads. You can even load them in your old iPod and make it useful again. SpotifyDownloader provides you with all of that while
+                being completely free to use! Not even a penny is required to use our service.</p>
+            <h2>FAQs for SpotifyDownloader</h2>
+            <p><b>Is this free to use?</b><br> Yes, totally free to use. You can download as many songs as you want completely for free!</p>
+            <p><b>Do I need a Spotify account to use this?</b><br> No. You don't need a Spotify account to use this tool. You don't even need Spotify Premium to download songs from here. SpotifyDownloader is fully automated and requires no login at all.</p>
+            <p><b>Can I download playlists and albums with it?</b><br>Yes, you can download full playlists and albums as a ZIP file with a single click. All the songs are named inside the ZIP file correctly and are with all the metadata like cover images,
+                authors, etc.</p>
+            <p><b>What's the audio quality? Do I need to install anything?</b><br>SpotifyDownloader converts and downloads songs as best quality MP3 with a bitrate of 320kbps. You also don't need to install anything to use this incredible tool. Everything
+                happens inside your browser. SpotifyDownloader also works on all platforms including mobile devices.</p>
+            <p><b>Is there any plugin for this?</b><br>Absolutely! You can use our SpotifyDownloader userscript to inject download buttons directly into your web Spotify player. Then, you don't even have to copy any links around and you can save tracks at
+                even faster speed. Scroll up to the userscript section to learn how to use that.</p>
+            <h2>Conclusion</h2>
+            <p>There are many reasons why someone would want to have a local copy of a Spotify song. It can that the user has limited internet and can't stream music all the time using the internet. Or it can be that the user wants to play songs in their
+                old audio player that unfortunately can't run Spotify. Or they might want to burn the song onto an old storage device like CDs or DVDs. Whatever might be their goal, SpotifyDownloader comes in extremely handy in all cases. It is a great
+                tool with a vast use case. Without any technical knowledge, anyone can download any Spotify track within a matters of seconds and fulfill their deeds from the comfort of their home. <br><br>This concludes the short description of SpotifyDownloader,
+                a simple yet powerful tool that lets you download any Spotify song as MP3. See you next time. Keep using our tool and supporting us!</p>
+        </section>
+    </main>
+    <footer class="container">
+        <small>
+			<a target="_blank" rel="noopener" title="Changes" href="changelog.html">Changelog</a> • 
+			<a target="_blank" rel="noopener" title="Contact Us" href="contact.html">Contact</a> • 
+			<a target="_blank" rel="noopener" title="Terms and Conditions" href="terms.html">Terms</a> • 
+			<a target="_blank" rel="noopener" title="Privacy Policy" href="privacy-policy.html">Privacy Policy</a> • 
+			<a target="_blank" rel="noopener" title="Disclaimer" href="disclaimer.html">Disclaimer</a>
+		</small>
+        <br><br>
+        <small><small>This website is not affiliated or endorsed by Spotify AB. The use of the name "Spotify" on this website is for context only, we are not claiming any ownership. All that remains to the rightful copyright owners.</small></small>
+    </footer>
+    <script defer src="js/jszip.min.js"></script>
+    <script defer src="js/browser-id3-writer.min.js"></script>
+    <script defer src="js/main.js?v=54"></script>
+    <!-- Cloudflare Pages Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d79e856bc5846e891c1136ffa425b80"}'></script>
+    <!-- Cloudflare Pages Analytics -->
+    <script>
+        (function() {
+            function c() {
+                var b = a.contentDocument || a.contentWindow.document;
+                if (b) {
+                    var d = b.createElement('script');
+                    d.innerHTML = "window.__CF$cv$params={r:'92661cd689ec9564',t:'MTc0Mjk4NjQ5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                    b.getElementsByTagName('head')[0].appendChild(d)
+                }
+            }
+            if (document.body) {
+                var a = document.createElement('iframe');
+                a.height = 1;
+                a.width = 1;
+                a.style.position = 'absolute';
+                a.style.top = 0;
+                a.style.left = 0;
+                a.style.border = 'none';
+                a.style.visibility = 'hidden';
+                document.body.appendChild(a);
+                if ('loading' !== document.readyState) c();
+                else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+                else {
+                    var e = document.onreadystatechange || function() {};
+                    document.onreadystatechange = function(b) {
+                        e(b);
+                        'loading' !== document.readyState && (document.onreadystatechange = e, c())
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>

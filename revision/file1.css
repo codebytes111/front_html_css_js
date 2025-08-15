@@ -1,0 +1,24 @@
+#site{
+    text-align: center;
+}
+/* .img{
+
+    background-position: top right;
+    background postiton cannot be applied html img tag.
+} */
+
+.bg-box{
+    height:500px;
+    width:550px;
+    color:rgb(34,251,156);
+    background-color:#aa88dd;
+    background-image:url("../html/gittyprojects/imgit/doraemon.jpeg");
+    background-position:bottom right;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-clip:padding-box;
+    background-origin:content-box;
+    /* background:color image repeat position/size attachment origin clip; */
+
+}

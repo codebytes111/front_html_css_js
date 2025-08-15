@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin:0; padding:0;
+        }
+        nav {
+            background-color:chartreuse;
+             padding:5px;
+        }
+        nav a{
+            text-decoration:none;
+            margin:40px;
+            font-size:medium;
+        }
+        h1{
+            text-align:center;
+            text-transform:capitalize;
+            background-color:cadetblue;
+            padding:5px;
+            position:relative;
+            z-index:10;
+
+        }
+        #box{
+            height:100px;
+            width:100px;
+            background-color:green;
+            border-radius:50%;
+            margin:10px;
+            text-align:center;
+        }
+        .box{
+            height:100px;
+            width:100px;
+            background-color:blueviolet;
+            display:inline-block;
+            margin:35px;
+            border-radius:6px;
+        }
+        .container{
+            border:3px solid black;
+            /* position:inline-block; */
+        }
+
+        #box2{
+            z-index:2;
+            position:relative;  /* position:absolute;  */
+            left:330px;
+        }
+
+        #box4{
+            height:100px;
+            width:100px;
+            background-color:burlywood;
+            margin:30px;
+            position:fixed;
+        }
+        footer{
+          position:fixed;
+            bottom:0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the page!!</h1>
+        <nav> <a href="#home">Home</a>
+         <a href="#content">content</a></nav>
+    </header>
+    <main>
+
+        <div id="box">div1.</div>
+
+        <div class="container">
+        <div id="box1" class="box">box1</div>
+        <div id="box2" class="box">box2</div>
+        <div id="box3" class="box">box3</div>
+        </div>
+
+        <div id="box4">box4</div>
+
+        <!-- <div id="box1" class="box">div2</div>
+        <div id="box2" class="box">div3</div>
+        <div id="box3" class="box">div4</div>
+
+        <div id="box1" class="box">div2</div>
+        <div id="box2" class="box">div3</div>
+        <div id="box3" class="box">div4</div>
+
+        <div id="box1" class="box">div2</div>
+        <div id="box2" class="box">div3</div>
+        <div id="box3" class="box">div4</div> -->
+
+        </html>
+    </main>
+    <footer><marquee>Footer text</marquee></footer>
+</body>
+</html>

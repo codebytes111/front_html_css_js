@@ -1,0 +1,28 @@
+.box{
+    height:250px;
+    width:250px;
+}
+#box1{
+    background-color:yellow;
+}
+#box2{
+    background-color:cyan;
+}
+#text{
+    text-decoration:underline;
+}
+#link{
+    text-decoration:none;
+    text-transform:capitalize; /*lowercase or uppercase or none*/
+     /*only first letters get capital*/
+}
+#lh{
+    line-height:1.2em; /* em is greater than px 1.2em = may be 30px*/
+    font-size:medium;
+    font-weight:100;
+    font-style:italic;
+}
+#fontstyle{
+    font-style:oblique;
+    font-family:sans-serif;
+}
