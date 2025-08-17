@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #box{
+            height:150px;
+            width:200px;
+            border:3px yellow solid;
+            position:relative;
+            top:60px;
+            left:50px;
+            background-color: chartreuse;
+            font-size:28px;
+
+            animation-name:spin;
+            animation-duration:2s;
+            animation-delay: 1s;
+            animation-timing-function:ease-in-out;
+
+            animation-iteration-count: infinite;
+            animation-direction:alternative;
+        }
+
+        @keyframes spin{
+            /* from{left:10px;}
+            to{left:200px;} */
+
+            /* 0%{left:20px;}
+            50%{left:50px;}
+            100%{left:200px;} */
+
+            0%{left:50px; top:0px;}
+            50%{left:200px; top:50px;}
+            100%{left:300px; top:100px;}
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">Animation</div>
+</body>
+</html>
