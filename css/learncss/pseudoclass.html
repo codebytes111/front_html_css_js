@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pseudo class</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color: bisque;
+        }
+        .container{
+            background-color:azure;
+            height:600px;
+            width:600px;
+            border:3px solid black;
+            border-radius:15px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            padding:20px;
+        }
+        input{
+            padding:10px;
+        }
+        #name,#pass{
+            padding:5px;
+            font-size:32px;
+        }
+        label{
+            font-size:32px;
+        }
+        button{
+            font-size:24px;
+            height:50px;
+            width:150px;
+            background-color: blueviolet;
+        }
+        button:hover{ /*active*/
+            width:190px;
+            background-color: crimson;
+        }
+        </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login Page</h1>
+        <br>
+        <label for="name">Name <input type="text" id="name"></label>
+        <br>
+        <label for="Passsword">Password <input type="password" id="pass"></label>
+        
+        <br>
+        <button type="submit">Submit</button>
+    </div>
+</body>
+</html>
