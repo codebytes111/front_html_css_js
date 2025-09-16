@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="container">
+    
+    <h4>My first basic Calculator</h4>
+
+    <div id="outline">     
+        <input type="text" id="display" readonly>
+        
+        <div id="butn">
+        <button class="btn" id="b1"  onClick="currentDisplay='';
+         document.querySelector('#display').value=currentDisplay;">c</button>
+
+        <button class="btn" id="b2" onClick="currentDisplay+='1';
+         document.querySelector('#display').value=currentDisplay;">1</button>
+
+        <button class="btn" id="b3" onClick="currentDisplay+='2';
+         document.querySelector('#display').value=currentDisplay;">2</button>
+        
+         <button class="btn" id="b4" onClick="currentDisplay+='+';
+         document.querySelector('#display').value=currentDisplay;">+</button>
+
+        <button class="btn" id="b5" onClick="currentDisplay+='3';
+         document.querySelector('#display').value=currentDisplay;">3</button>
+
+        <button class="btn" id="b6" onClick="currentDisplay+='4';
+         document.querySelector('#display').value=currentDisplay;">4</button>
+         
+        <button class="btn" id="b7" onClick="currentDisplay+='-';
+         document.querySelector('#display').value=currentDisplay;">-</button>
+
+        <button class="btn" id="b8"  onClick="currentDisplay+='5';
+         document.querySelector('#display').value=currentDisplay;">5</button>
+
+        <button class="btn" id="b9"  onClick="currentDisplay+='6';
+         document.querySelector('#display').value=currentDisplay;">6</button>
+
+        <button class="btn" id="b10" onClick="currentDisplay+='*';
+         document.querySelector('#display').value=currentDisplay;">*</button>
+
+        <button class="btn" id="b11"  onClick="currentDisplay+='7';
+         document.querySelector('#display').value=currentDisplay;">7</button>
+
+        <button class="btn" id="b12"  onClick="currentDisplay+='8';
+         document.querySelector('#display').value=currentDisplay;">8</button>
+
+        <button class="btn" id="b13" onClick="currentDisplay+='/';
+         document.querySelector('#display').value=currentDisplay;">/</button>
+
+        <button class="btn" id="b14" onClick="
+        let result=eval(currentDisplay);
+        currentDisplay=result;
+         document.querySelector('#display').value=currentDisplay;">=</button>
+
+        <button class="btn" id="b15"  onClick="currentDisplay+='9';
+         document.querySelector('#display').value=currentDisplay;" >9</button>
+
+        <button class="btn" id="b16"  onClick="currentDisplay+='0';
+         document.querySelector('#display').value=currentDisplay;">0</button>
+
+        <button class="btn" id="b17"  onClick="currentDisplay+='.';
+         document.querySelector('#display').value=currentDisplay;">.</button>
+        </div>
+    </div>
+</div>
+    <script>
+        let currentDisplay='';
+        document.querySelector('#display').value=currentDisplay;
+        </script>
+</body>
+</html>
+
+<!-- The value property is used for form elements like <input>, <textarea>, <select>. -->
+    <!-- The innerHTML property is used for general elements like <div>, <p>, <span>. -->

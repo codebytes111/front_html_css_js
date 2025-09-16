@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0; padding:0;
+        }
+        div{
+            height:100vh;
+            width:auto;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #click{
+            height:150px;
+            width:150px;
+            border-radius: 5;
+            background-color: yellow;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .a{
+            height:50px;
+            width:50px;
+            border-radius: 5;
+            background-color:rgb(210, 28, 159);
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            margin:5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <button id="clicks" onclick="alert('button its clicked')">Click Me</button>
+
+    <!-- document.querySelector('#clicks').click(); -->
+
+
+    <!-- <button id="click1" class="a">Click a</button>
+    <button id="click1" class="a">Click b</button>
+    <button id="click1" class="a">Click c</button>
+    <button id="click1" class="a">Click d</button> -->
+
+
+    <!-- document.getElementById('click')
+    <button id=​"click">​Click Me​</button>​flex
+    document.getElementByClassName('a')
+    VM677:1 Uncaught TypeError: document.getElementByClassName is not a function
+        at <anonymous>:1:10
+    (anonymous) @ VM677:1Understand this error
+    document.getElementsByClassName('a')
+    HTMLCollection(4) [button#click1.a, button#click1.a, button#click1.a, button#click1.a, click1: button#click1.a]0: button#click1.aaccessKey: ""ariaActiveDescendantElement: nullariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColIndexText: nullariaColSpan: nullariaControlsElements: nullariaCurrent: nullariaDescribedByElements: nullariaDescription: nullariaDetailsElements: nullariaDisabled: nullariaErrorMessageElements: nullariaExpanded: nullariaFlowToElements: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLabelledByElements: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowIndexText: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: id, 1: class, id: id, class: class, length: 2}autocapitalize: ""autofocus: falsebaseURI: "file:///C:/Users/anvit/OneDrive/Desktop/Dworks/button.html"childElementCount: 0childNodes: NodeList [text]children: HTMLCollection []classList: DOMTokenList ['a', value: 'a']className: "a"clientHeight: 47clientLeft: 2clientTop: 2clientWidth: 47command: ""commandForElement: nullcontentEditable: "inherit"currentCSSZoom: 1dataset: DOMStringMap {}dir: ""disabled: falsedraggable: falseeditContext: nullelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: nullform: nullformAction: "file:///C:/Users/anvit/OneDrive/Desktop/Dworks/button.html"formEnctype: ""formMethod: ""formNoValidate: falseformTarget: ""hidden: falseid: "click1"inert: falseinnerHTML: "Click a"innerText: "Click a"inputMode: ""isConnected: trueisContentEditable: falselabels: NodeList []lang: ""lastChild: textlastElementChild: nulllocalName: "button"name: ""namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: button#click1.anextSibling: textnodeName: "BUTTON"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 50offsetLeft: 301offsetParent: bodyoffsetTop: 158offsetWidth: 50onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforetoggle: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncommand: nulloncontentvisibilityautostatechange: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonscrollend: nullonscrollsnapchange: nullonscrollsnapchanging: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<button id=\"click1\" class=\"a\">Click a</button>"outerText: "Click a"ownerDocument: documentparentElement: divparentNode: divpart: DOMTokenList [value: '']popover: nullpopoverTargetAction: "toggle"popoverTargetElement: nullprefix: nullpreviousElementSibling: button#clickpreviousSibling: textrole: nullscrollHeight: 47scrollLeft: 0scrollTop: 0scrollWidth: 47shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: 0tagName: "BUTTON"textContent: "Click a"title: ""translate: truetype: "submit"validationMessage: ""validity: ValidityState {valueMissing: false, typeMismatch: false, patternMismatch: false, tooLong: false, tooShort: false, …}value: ""virtualKeyboardPolicy: ""willValidate: truewritingSuggestions: "true"[[Prototype]]: HTMLButtonElement(...)1: button#click1.a2: button#click1.a3: button#click1.aclick1: button#click1.alength: 4[[Prototype]]: HTMLCollection
+    document.querySelector("div")
+    <div>​…​</div>​flex
+    document.querySelector(".a")
+    <button id=​"click1" class=​"a">​Click a​</button>​flex
+    document.querySelector("#click")
+    <button id=​"click">​Click Me​</button>​flex
+    document.querySelectorAll(".a")
+    NodeList(4) [button#click1.a, button#click1.a, button#click1.a, button#click1.a]0: button#click1.a1: button#click1.a2: button#click1.a3: button#click1.alength: 4[[Prototype]]: NodeList -->
+
+</div>
+<script src="index.js">
+    // alert('inside the html page')
+    console.log('hi friends');
+    // console.error('this eerror');
+    // console.warn('this warns');
+</script>
+</body>
+</html>

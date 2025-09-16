@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables practise</title>
+</head>
+<body>
+    <p id="name"></p>
+    <hr>
+    <p id="myntra"></p>
+    <script>
+        var name='daisy';
+        document.querySelector('#name').innerHTML=`my name is ${name} and im five years old.`;
+    
+
+        let jeansprice=(15599-10/100*15599)-272;
+        let bagprice=(2499-41/100*2499)-29;
+        let conviencefee=25+20;
+        const gst=18;
+        var total=Math.round((jeansprice+bagprice+conviencefee)*((100+gst)/100));
+        document.querySelector('#myntra').innerHTML='your total myntra bag price is: '+total;
+        // console.log('your total myntra bag price is: '+total);
+
+        console.log(eval('2+3*5+7')); //string calculation into result
+
+    </script>
+</body>
+</html>

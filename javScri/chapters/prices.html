@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prices</title>
+</head>
+<body>
+
+    <script>
+
+    // console.log(15599-10/100*15599-272+2499-41/100*2499-29+25+20);
+
+    let jeansPrice = (15599 - (10/100) * 15599) - 272;
+    let bagPrice = (2499 - (41/100) * 2499) - 29;
+    let deliverCharges = 25 + 20;
+    let bagvalue = Math.round((jeansPrice + bagPrice + deliverCharges) * 118/100);
+   
+    //gst price is 18% so we do 100/100 * 18 so it is 118
+    // console.log('your total order price is: '+ bagvalue);
+
+    let bagSummary = `your total Cart order is: ${bagvalue}`;
+    console.log(bagSummary);
+
+    </script>
+
+</body>
+</html>
