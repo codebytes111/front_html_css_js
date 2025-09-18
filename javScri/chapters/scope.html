@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope variable</title>
+</head>
+<body>
+    <script>
+         let age = 34;
+         let mssg; //global
+         if(age > 18){
+             mssg = 'can drive'; //local
+            //   console.log(mssg);
+         }
+         else{
+            mssg='use bicycle'
+            //   console.log(mssg);
+         }
+         console.log(mssg);
+    </script>
+</body>
+</html>
+
+<!--small scope doesnt come out but big scope can use the small scope-->
+<!--
+ var doesnot follow scope beacuse its old way.
+
+ when let is declared in the global scope then no need to again declare in the local scope.
+
+ if global variable declared with the same being the local varibale same then it actually redefines again
+ -->
+
+ <!--
+ from the above what happend was when mssg id declared globally with let and again declred with let in local also...then the inside statements having the local variables gets executed without any problem but with ...printing the outside console.log...the output is undefined
+ -->
+
+ <!--
+ the above rules is for let only.
+ 
+ it doesnt apply for var, var has no problem with local and global-->
