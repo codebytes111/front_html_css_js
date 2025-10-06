@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Booking Metro Ticket</h1>
+    <hr>
+    <label for="gen">  Select Your Gender : 
+
+      <select id="gen" name="gender" >
+        <option Value='Male' id="m">Male</option>
+        <option value="female" id="f">Female</option>
+    </select>
+
+    </label>
+
+    <p></p>
+
+<label for="age" >Enter your Age :
+<input type="number" id="age" name="age" placeholder="enter your age" required>
+
+</label>
+<p></p>
+
+<button onClick="
+
+let genSelect= `the gender is ${document.querySelector('#gen').value}`;
+
+let ageSelect= `the age is ${Number(document.querySelector('#age').value)}`;
+
+// alert(genSelect + ' and ' + ageSelect);
+
+let ticket=100;
+console.log(`the metro ticket price is ${ticket}Rs`);
+let gender=document.querySelector('#gen').value;
+let age=document.querySelector('#age').value;
+
+//console.log(gender);
+//console.log(age);
+
+let discount=0;
+
+/* if(gender === 'female' || age <= 8 ){
+    discount=0.5;
+ticket*=discount;
+}
+
+if(age<=5){
+    ticket = 0;
+}
+
+if(age>=65){
+    discount=0.7;
+    ticket*=discount;
+} */
+
+//below code using max function
+/*if(age <= 5){
+    discount=1;
+}
+
+else{
+    let d1=0;
+    let d2=0;
+    let d3=0;
+
+    if(gender ==='female') d1=0.5;
+    if(age <= 8) d2=0.5;
+    if(age >=65 ) d3=0.7;
+
+    discount=Math.max(d1,d2,d3);
+}
+let finalFare =Math.round(ticket*(1-discount));
+alert(`The ticket fare is ${finalFare}`);
+*/
+
+//Doing without max function 
+
+if(age<=5){
+    if(1 > discount) discount=1;
+}
+
+if(gender=='female'){
+    if(0.5 > discount) discount=0.5;
+}
+
+if(age<=8 && age>=6){
+    if(0.5>discount)discount=0.5;
+}
+if(age>=65){
+    if(0.7>discount)discount=0.7
+}
+
+ticket=Math.round(ticket*(1-discount));
+
+alert(`your ticket fare is ${ticket}Rs`);
+">Submit</button>
+
+</body>
+</html>
+
+
+
+<!-- Notes on my code:
+
+## 💬 Notes
+-> `.value` returns a string → always use `Number()`.
+-> Use `Math.round()` or `.toFixed(2)` for rounding.
+
+what I have done:
+-> i tried do the html on my own but got confused on how to do js.
+-> got confused with if statements, later I took help from chatgpt by hints but not whole code.
+-> got errors in html also.But i got it corrected later did js using hints,took 3hrs of time.
+
+Errors I faced:
+-> I applied multiple discounts directly in my first version of if statement which actually works but doesn't care if the input is out of box.
+-> didn't convert input values to numbers ex: age when query selected gets converted into  a string which i got to know using chatgpt.
+
+what should i improve: (feedback by gpt)
+-> ⚠️ Issues Found
+- Forgot to convert input `.value` to a number initially.
+- Inline `onClick` logic is cramped and messy.
+- Early stacking of discounts was wrong. -->
