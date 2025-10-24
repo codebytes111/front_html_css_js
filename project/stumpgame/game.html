@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat Ball Stump Game</title>
+    <link href="game.css" rel="stylesheet">
+</head>
+<body>
+<header>
+        <nav>
+            <a href="profile.html" target="_blank">Profile</a>
+            <a href="home.html">Home</a>
+            <a href="contact.html" target="_blank">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>Choose one of the objects below.</p>
+        <div id="box">
+        <div id="bat" class="box" onclick="
+            computerChoice = randomGuess();
+            // let userChoice='you have chosen bat';
+            let result;
+            if(computerChoice == 'Bat'){
+                result='its a tie.'
+            }
+            if(computerChoice == 'Ball'){
+                result='user wins.'
+            }
+            if(computerChoice == 'Stump'){
+                result='computer wins.'
+            }
+
+            alert(`You have chosen Bat and the computer choice is ${computerChoice} and ${result}`);
+
+
+            "></div>
+        <div id="ball" class="box"onclick="
+             computerChoice = randomGuess();
+            let result;
+            if(computerChoice == 'Ball'){
+                result='its a tie.'
+            }
+            if(computerChoice == 'Stump'){
+                result='user wins.'
+            }
+            if(computerChoice == 'Bat'){
+                result='computer wins.'
+            }
+
+            alert(`You have chosen ball and the computer choice is ${computerChoice} and ${result}`);
+
+            "></div>
+
+        <div id="stump" class="box" onclick="
+            computerChoice = randomGuess();
+            if(computerChoice == 'Stump'){
+                result='its a tie.'
+            }
+            if(computerChoice == 'Ball'){
+                result='Computer wins.'
+            }
+            if(computerChoice == 'Bat'){
+                result='user wins.'
+            }
+
+           alert(`You have chosen Stump and the computer choice is ${computerChoice} and ${result}`);
+
+
+            "></div>
+        </div>
+    </main>
+</body>
+<script>
+    
+    function randomGuess(){
+         let computerChoice; // make it local variable and the
+                             // function doesn`t work.
+    let randomNumber = Math.random() * 3;
+    
+
+    if(randomNumber > 0 && randomNumber <= 1){
+        return 'Bat';
+    }
+    else if(randomNumber > 1 && randomNumber <= 2){
+        return 'Ball';
+    }
+    else if(randomNumber > 2 && randomNumber <= 3){
+        return 'Stump';
+    }
+
+
+
+    // console.log(`The computer choice is ${computerChoice}`);
+    // alert(`The computer choice is ${computerChoice}`);
+}
+    </script>
+</html>
