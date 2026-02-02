@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is for objects.</title>
+</head>
+<body>
+<script>
+    let product = {
+        company : 'Pv products',
+        price :  3000,
+        'item-name': 'skirt'
+    };
+    console.log(typeof(product)); //object
+
+    console.log(product); //{company: 'Pv products', 
+    // price: 3000, item_name: 'skirt'}
+
+    console.log(product.company); //Pv products
+    console.log(product.price);     //3000
+    console.log(product.item_name); //if none its undefined.
+
+    product.company = 'banana';
+    console.log(product.company);
+
+    console.log(product['company']);
+   // console.log(product.'item-name') //its wrong 
+   console.log(product['item-name']);
+
+   product['company']='PV Fashions'
+   console.log(product.company); //define or create new properties.
+
+
+   
+    </script>
+</body>
+</html>
+
+<!-- regarding the object using in js.
+we can use either . dot operator or either bracket
+enclosing single strings.
+-->

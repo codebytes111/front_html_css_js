@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object reference</title>
+</head>
+<body>
+    <script>
+    let a = 5;
+    let b = a;
+    console.log(`a = ${a}, b = ${b}`); //a = 5, b = 5
+
+    a = 6;
+    console.log(`a = ${a}, b = ${b}`);  //a = 6, b = 5
+
+
+    let obj1 = { x : 1};
+    let obj2 = { y : obj1.x};
+    console.log(`x = ${obj1.x}, y = ${obj2.y}`); //x = 1, y = 1
+
+    let d = {num : 10};
+    let c = d;
+    console.log(d);  //objectsref.html:25 {num: 10}
+    console.log(c);   //objectsref.html:27 {num: 20}
+    d.num=20;
+    console.log(d);
+    console.log(c); //objectsref.html:28 {num: 20}
+
+    let p = { val : 'abc'};
+    let q = { val : 'abc'};
+    console.log(p==q); //false
+
+    p = { val : 'abc'};
+    q = p;
+    console.log(p==q); //true
+
+    //from above we can observe both are same but diff ops becuase in first code there is different memory location each having their own reference and memory locations but in 2nd code we can observe that two of them sharing same memory location of content.
+
+
+    
+
+    //  let x = { num : 1};
+    // let y = x;
+    // console.log(`x = ${x.num}, y = ${y.num}`);
+
+    //that means in (pass by value) the values get changed when intialized again..this value chnaged doesnt effect the variable thats already depending on these
+    //so it said if a and b taken intialized with == then the value changed in the a doesnt effect the b value
+
+    //in pass by reference the object stores properties so another object usinv the same properties may depend on the object1 that intially taken which means --- a obj2 which depend ons obj1 gets effected if any chnages in obj1...so if obj1 properties get changed then the obj2 properties also chnaged.
+
+    let product = {
+        company : 'Pv products',
+        price :  3000,
+        'item-name': 'skirt'
+    };
+
+    console.log(product);
+
+    console.log(product.company); //1 way
+
+    let company = product.company; //2 way
+    console.log(company);
+
+    company = product['company']; //3 way
+    console.log(company);
+     
+    let {price} = product; //4 way
+    console.log(price);
+    </script>
+</body>
+</html>

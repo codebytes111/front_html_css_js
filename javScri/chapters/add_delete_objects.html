@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employee = {
+            name : 'john doe',
+            salary : 20000,
+            empId : '251d',
+
+            displaySalary: function() {
+                return `the salary of employee is: ${this.salary}`;
+            },
+
+            displayName: function() {
+                console.log('Employee name is '+employee.name);
+            }
+        };
+
+        console.log(employee);
+
+          employee.displayName();
+
+        console.log(employee.displaySalary());
+
+        // employee.displayName();
+
+
+        let newEmployee = employee;
+        newEmployee.name = 'sarah';
+        newEmployee.salary = 50000;
+
+        console.log(newEmployee.displaySalary());
+
+        newEmployee.displayName();
+
+
+        // employee['email'] = 'john234@gmail.com';
+        // console.log(employee);
+
+        //   employee.displayName();
+
+        //  delete employee.email;
+        // console.log(employee);
+
+         //add
+        // employee['email'] =  'johndoe@gmail.com';
+        // console.log(employee);
+
+        // employee['age'] = 22;
+        // console.log(employee)
+
+        // //delete
+        // delete employee.age;
+        // console.log(employee);
+
+        // //loop
+        // for (let key in employee) {
+        //     console.log(key,':',employee[key]);
+        // }
+
+
+
+
+
+       
+        
+    </script>
+</body>
+</html>

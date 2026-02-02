@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check(n){
+            if(n%2===0) return 'even';
+            else return 'odd';
+        }
+        // let result = check(3);
+        // console.log(result);
+        console.log(check(4));
+        console.log(check(5));
+        console.log(check(6));
+
+        function isEven(n){
+            let rem = n%2;
+            let isEven = rem == 0;
+            return isEven;
+        }
+        console.log(isEven(2));
+        console.log(isEven(3));
+
+
+        function largerCheck(a,b,c){
+            if(a>=b && a>=c) return a;
+            if(b>=a && b>=c) return b;
+            return c;
+            // if(c>a && c>b) return c; // fails if have same two nums
+        }
+        console.log(largerCheck(3,4,5));
+        console.log(largerCheck(663,54,5009));
+
+        function celsiusToFahrenheit(num){
+            return (9/5)*num+32;
+        }
+        let f = celsiusToFahrenheit(10);
+        console.log(f);
+
+        function fahrenheitToCelsius(num){
+            return (5/9)*(num-32);
+        }
+        console.log(fahrenheitToCelsius(50));
+
+    </script>
+</body>
+</html>

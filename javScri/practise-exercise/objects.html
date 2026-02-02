@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object practise exercise</title>
+</head>
+<body>
+    <script>
+
+        let Myntra = {
+            product : 'dress',
+            price : 861,
+            rating : 4.5,
+            time : '24hrs',
+
+            // display:function() {
+            //     return `delivery time ${this.time}`;
+            //}
+        };
+
+        console.log(Myntra);
+
+        let a = { student : 10 };
+        let b = a.student ;
+
+        console.log(a['student']);
+        console.log(`a class has ${a.student} and b class has ${b}`);
+        //a class has 10 and b class has 10
+
+          let amazon = {
+            product :'pant',
+            price : 861,
+            rating : 4.5,
+            time : '24hrs',
+            // display:function() {
+            //     return `delivery time ${this.time}`;
+            // }
+
+          };
+
+        console.log(amazon);
+
+        let copy = Myntra;
+        copy.product='pant';
+        console.log(copy);
+        console.log(Myntra);
+
+        // Myntra['deliver-time'] = '1 day';
+         Myntra.delivertime = '1 day';
+        console.log(Myntra);  // delivertime: "1 day"
+
+        amazon.delivertime = '1 day';
+
+        let greeting = {
+            message : 'good job',
+            status : 'complete',
+        };
+
+        let x =greeting.message;
+        console.log(x);
+        let y = greeting['status'];
+        console.log(y);
+
+        function docompare(obj1,obj2) {
+
+            if(obj1 === obj2 ){
+                return true;
+            }
+
+            if (typeof obj1 !== 'object' || typeof obj2 !== 'object' || obj1 === null || obj2 === null ) {
+                console.warn('The parameter passed was not an object.')
+                return false;
+            }
+
+            
+            let keys1 = Object.keys(obj1);
+            let keys2 = Object.keys(obj2);
+
+            if(keys1.length !== keys2.length) return false;
+
+            for(let key of keys1){
+                if(!docompare(obj1[key],obj2[key])) return false;
+            }
+            return true;
+        }
+
+
+        console.log(docompare(Myntra,copy)); //true
+
+        console.log(docompare(Myntra,10)); //false
+
+        console.log(docompare(Myntra,amazon)); //false
+
+    </script>
+</body>
+</html>

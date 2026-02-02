@@ -17,32 +17,74 @@
 
     <main>
         <p>Choose one of the objects below.</p>
+
+        <div id="say"></div>
+
         <div id="box">
+
+     
+
         <div id="bat" class="box" onclick="
             computerChoice = randomGuess();
             // let userChoice='you have chosen bat';
             let result = getResult('Bat',computerChoice);
-            alert(`You have chosen Bat and the computer choice is ${computerChoice} and ${result}`);
+            showResult('Bat',computerChoice,result);
             "></div>
-        <div id="ball" class="box"onclick="
-             computerChoice = randomGuess();
-             result = getResult('Ball',computerChoice);
-            alert(`You have chosen ball and the computer choice is ${computerChoice} and ${result}`);
 
+        <div id="ball" class="box"onclick="
+            computerChoice = randomGuess();
+            let result = getResult('Ball',computerChoice);
+            showResult('Ball',computerChoice,result);
             "></div>
+
 
         <div id="stump" class="box" onclick="
             computerChoice = randomGuess();
+            
             result = getResult('Stump',computerChoice);
-           alert(`You have chosen Stump and the computer choice is ${computerChoice} and ${result}`);
-
-
+            showResult('Stump',computerChoice,result);
             "></div>
+
         </div>
+        <div id="foot">
+
+           <button id="re-bt" class="bt"  onClick="
+
+           resetScore();
+           
+           "> Reset Score </button>
+
+         <div id="score" class="score-box">
+                <p id="win" class="s"> Win: 0 </p>
+                 <p id="lost" class="s"> Lost: 0 </p>
+                  <p id="tie" class="s"> Tie: 0 </p>
+            </div>
+
+            <button id="gr-bt" class="bt"> Game Rules </button>
+
+        </div>
+
+
+            
+
     </main>
 </body>
 <script>
     
+    let score = {
+        win : 0,
+        lost : 0,
+        tie : 0,
+    };
+
+
+   function resetScore() {
+  score = { win: 0, lost: 0, tie: 0 };
+  document.getElementById('win').textContent = 'Win: 0';
+   document.getElementById('lost').textContent = 'Lost: 0';
+   document.getElementById('tie').textContent = 'Tie: 0';
+ }
+
     function randomGuess(){
          let computerChoice; // make it local variable and the
                              // function doesn`t work.
@@ -67,12 +109,16 @@ function getResult(userMove, computerMove) {
  if(userMove === 'Bat'){
 
       if(computerMove == 'Bat'){
+                score.tie++;
+                score.say ='Its a Tie';
                 return 'its a tie.'
             }
             if(computerMove == 'Ball'){
+                score.win++;
                  return 'user wins.'
             }
             if(computerMove == 'Stump'){
+                score.lost++;
                return 'computer wins.'
             }
  }
@@ -80,26 +126,56 @@ function getResult(userMove, computerMove) {
  else if (userMove === 'Ball') {
 
      if(computerMove == 'Ball'){
+        score.tie++;
                 return 'its a tie.'
             }
             if(computerMove == 'Stump'){
+                score.win++;
                 return 'user wins.'
             }
             if(computerMove == 'Bat'){
+                score.lost++;
                 return 'computer wins.'
             }
  }
  else{
       if(computerMove == 'Stump'){
+                score.tie++;
                 return 'its a tie.'
             }
             if(computerMove == 'Ball'){
+                score.lost++;
                 return 'Computer wins.'
             }
             if(computerMove == 'Bat'){
+                score.win++;
                 return 'user wins.'
             }
  }
 }
+ function showResult(userMove,computerMove,result){
+    console.log(score);
+
+    if(result === 'user wins.'){
+        say = 'Hurray, You Win !!'
+
+    }
+    else if (result === 'computer wins.'){
+        say = 'You have Lost. Try Again'
+    }
+    else {
+        say = 'Hahaha, its a Tie.'
+    }
+
+   document.getElementById('win').textContent = `Win : ${score.win}`;
+   document.getElementById('lost').textContent = 'Lost : '+score.lost;
+   document.getElementById('tie').textContent = 'Tie : '+score.tie;
+   
+   document.getElementById('say').textContent = `${say}`;
+ alert(`You have chosen ${userMove} and the computer choice is ${computerMove} and ${result}`);
+ }
+
+
     </script>
 </html>
+
