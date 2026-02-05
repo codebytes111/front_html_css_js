@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json local storage date and dom</title>
+</head>
+<body>
+
+    <button id="btn">Click Me</button>
+    <script>
+        let y = Number(localStorage.getItem("clickCount"))|| 0 ;
+        
+        let btn = document.getElementById("btn");
+        if(y%2==0){
+                btn.style.backgroundColor = 'red';
+            }
+            else{
+                btn.style.backgroundColor = 'yellow';
+            }
+
+        btn.addEventListener("click", function() {
+        y++;
+            if(y%2==0){
+                btn.style.backgroundColor = 'red';
+            }
+            else{
+                btn.style.backgroundColor = 'yellow';
+            }
+
+             localStorage.setItem("clickCount",y);
+
+        });
+        // let user = 'Deepu';
+ 
+        // function displaytime(){
+
+        // let mydate = new Date();
+
+        // let currentHours = mydate.getHours();
+        // let currentMinute = mydate.getMinutes();
+        // let x = currentHours+":"+currentMinute;
+
+        // let greeting;
+
+        //     if(currentHours >=12 && currentHours <17 ) greeting = " Good Afternoon!";
+        //     else if ( currentHours>=17 && currentHours <19) greeting = " Good Evening!";
+        //     else if ( currentHours>=19 && currentHours <24)  greeting = " Good Night!";
+        //     else greeting = "Good Morning!"
+
+        //      console.log("Hey! "+user+" The time is " +x+" & it's"+greeting);
+
+        // };
+
+        // displaytime();
+
+
+</script>
+</body>
+</html>

@@ -17,7 +17,7 @@
 
     <main>
         <p>Choose one of the objects below.</p>
-
+        <h2 id="write"></h2 >
         <div id="say"></div>
 
         <div id="box">
@@ -55,27 +55,40 @@
            "> Reset Score </button>
 
          <div id="score" class="score-box">
-                <p id="win" class="s"> Win: 0 </p>
-                 <p id="lost" class="s"> Lost: 0 </p>
-                  <p id="tie" class="s"> Tie: 0 </p>
+                <p id="win" class="s"> Win:  </p>
+                 <p id="lost" class="s"> Lost:  </p>
+                  <p id="tie" class="s"> Tie: </p>
             </div>
 
             <button id="gr-bt" class="bt"> Game Rules </button>
 
         </div>
 
+  
 
-            
-
-    </main>
+    </main> 
 </body>
 <script>
     
-    let score = {
-        win : 0,
+    let score = JSON.parse(localStorage.getItem('score')) || {
+         win : 0,
         lost : 0,
         tie : 0,
     };
+
+   
+    // let score; 
+    // if(scoreStr !== null) {
+    //     score = JSON.parse(scoreStr)
+    // }else {
+    //  score = {
+    //     win : 0,
+    //     lost : 0,
+    //     tie : 0,
+    // };
+document.getElementById('win').textContent = `Win : ${score.win}`;
+document.getElementById('lost').textContent = `Lost : ${score.lost}`;
+document.getElementById('tie').textContent = `Tie : ${score.tie}`;
 
 
    function resetScore() {
@@ -83,6 +96,7 @@
   document.getElementById('win').textContent = 'Win: 0';
    document.getElementById('lost').textContent = 'Lost: 0';
    document.getElementById('tie').textContent = 'Tie: 0';
+  //localStorage.setItem('score',JSON.stringify(score));
  }
 
     function randomGuess(){
@@ -154,8 +168,13 @@ function getResult(userMove, computerMove) {
  }
 }
  function showResult(userMove,computerMove,result){
-    console.log(score);
 
+  localStorage.setItem('score',JSON.stringify(score));
+
+    console.log(score);
+    
+    let say;
+   
     if(result === 'user wins.'){
         say = 'Hurray, You Win !!'
 
@@ -167,13 +186,16 @@ function getResult(userMove, computerMove) {
         say = 'Hahaha, its a Tie.'
     }
 
+    document.querySelector('#write').innerText = `You have chosen ${userMove} and the computer choice is ${computerMove} and ${result}`;
+
    document.getElementById('win').textContent = `Win : ${score.win}`;
    document.getElementById('lost').textContent = 'Lost : '+score.lost;
    document.getElementById('tie').textContent = 'Tie : '+score.tie;
    
    document.getElementById('say').textContent = `${say}`;
- alert(`You have chosen ${userMove} and the computer choice is ${computerMove} and ${result}`);
- }
+//    alert();
+  
+}
 
 
     </script>

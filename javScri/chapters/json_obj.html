@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Json objects</title>
+        <meta charset = 'UTF-8'>
+        <meta name="viewport" content="width = device-width initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+        let product = {
+            name : "t-shirt",
+            color : "red",
+            price : 456,
+            rating : {
+            stars : 3.9,
+            noOfReviews : 145,
+            },
+        };
+        console.log(typeof product);
+        console.log(product);
+        let str = JSON.stringify(product);
+        console.log(str);
+        console.log(typeof str); 
+
+        let newProduct = JSON.parse(str);
+        console.log(newProduct);
+
+        // console.log(10 + "5"); //string
+        // console.log(typeof (10 + "5")); //number
+
+        </script>
+    </body>
+</html>
+
+

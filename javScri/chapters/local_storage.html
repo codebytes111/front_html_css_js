@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <script>
+        // localStorage.setItem('name','john');
+        // localStorage.setItem('age','29');
+
+        console.log(localStorage.getItem('name'));
+
+        let product = {
+            item : '3-piece set ',
+            color : 'pink',
+            price : 850,
+            ratings : {
+                stars : 4.0,
+                reviews : 29,
+            },
+        };
+
+        console.log(localStorage.setItem("product",product));  
+        //output is product [object object] (in local storage) //undefined (in console)
+
+        console.log(localStorage.setItem("product" ,JSON.stringify(product)));
+
+        // "item":"3-piece set ","color":"pink","price":850,"ratings":{"stars":4,"reviews":29
+
+        //console.log(localStorage.getItem("product" ,JSON.stringify(product)))
+
+        console.log(localStorage.getItem("product"));
+
+        //getItem require only single parameter.
+
+        // {"item":"3-piece set ","color":"pink","price":850,"ratings":{"stars":4,"reviews":29}}
+
+        //one way
+        let str = JSON.stringify(product);
+        let newProduct = JSON.parse(str);
+        console.log(newProduct);
+
+         //  Object → String → Object again
+        // Good for learning, but not needed when using storage.
+
+        //2nd way
+        let storedProduct = JSON.parse(localStorage.getItem("product"))
+        console.log(storedProduct);
+
+        //TO GET INDIVIDUAL ITEMS
+        console.log(storedProduct.item);  //3-piece set 
+        console.log(storedProduct.ratings); // {stars: 4, reviews: 29}
+        console.log(storedProduct.ratings.stars); //4
+        </script>
+
+</body>
+</html>
