@@ -7,52 +7,77 @@
 </head>
 <body>
 
-    <button id="btn">Click Me</button>
+    <h1 id="greet"></h1>
+    <button id="btn" style = "height:250px;width:250px; 
+    font-size: 40px;"></button>
+    
     <script>
-        let y = Number(localStorage.getItem("clickCount"))|| 0 ;
         
+        let y = Number(localStorage.getItem("clickCount"))|| 0 ;
+       
         let btn = document.getElementById("btn");
+         btn.innerHTML = y;
         if(y%2==0){
-                btn.style.backgroundColor = 'red';
+                document.body.style.backgroundColor = 'red';
             }
             else{
-                btn.style.backgroundColor = 'yellow';
+                document.body.style.backgroundColor = 'yellow';
             }
 
         btn.addEventListener("click", function() {
         y++;
+        btn.innerHTML = y;
             if(y%2==0){
-                btn.style.backgroundColor = 'red';
+                document.body.style.backgroundColor = 'red';
             }
             else{
-                btn.style.backgroundColor = 'yellow';
+                document.body.style.backgroundColor = 'yellow';
             }
 
              localStorage.setItem("clickCount",y);
-
         });
-        // let user = 'Deepu';
+
+        
+
+
+        let greet = document.getElementById("greet");
+            
+
+        let user = 'Deepu';
  
-        // function displaytime(){
+        function displaytime(){
 
-        // let mydate = new Date();
+        let mydate = new Date();
 
-        // let currentHours = mydate.getHours();
-        // let currentMinute = mydate.getMinutes();
-        // let x = currentHours+":"+currentMinute;
+        let currentHours = mydate.getHours();
+        let currentMinute = mydate.getMinutes();
+        let x = currentHours+":"+currentMinute;
 
-        // let greeting;
+        let greeting;
 
-        //     if(currentHours >=12 && currentHours <17 ) greeting = " Good Afternoon!";
-        //     else if ( currentHours>=17 && currentHours <19) greeting = " Good Evening!";
-        //     else if ( currentHours>=19 && currentHours <24)  greeting = " Good Night!";
-        //     else greeting = "Good Morning!"
+            if(currentHours >=12 && currentHours <17 ) greeting = " Good Afternoon!";
+            else if ( currentHours>=17 && currentHours <19) greeting = " Good Evening!";
+            else if ( currentHours>=19 && currentHours <24)  greeting = " Good Night!";
+            else greeting = "Good Morning!";
 
-        //      console.log("Hey! "+user+" The time is " +x+" & it's"+greeting);
+            //   if(currentHours >=12 && currentHours <17 ) return " Good Afternoon!";
+            // else if ( currentHours>=17 && currentHours <19) return " Good Evening!";
+            // else if ( currentHours>=19 && currentHours <24)  return " Good Night!";
+            // else return "Good Morning!"
 
-        // };
+             
+            return "Hey! "+user+" The time is " +x+" & it's"+greeting;
+           
+        };
 
+        // setInterval(function() {
+
+            // let x = console.log(displaytime());
+            // greet.innerHTML = x;
+             greet.innerHTML = displaytime();
         // displaytime();
+
+        // },60000);
 
 
 </script>

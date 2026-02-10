@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>push and pop </title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5];
+        console.log(arr);
+        arr.push(6);
+        console.log(arr);
+        arr.pop();
+        console.log('popped: '+arr.pop()); //it shows what popped.
+        console.log(arr);
+        console.log('popped: '+arr.pop()); //4
+        console.log('popped: '+arr.pop()); //3
+        console.log('popped: '+arr.pop()); //2
+        console.log('popped: '+arr.pop()); //1
+        console.log('popped: '+arr.pop()); //undefined there is nothig to pop.
+        console.log('push: '+arr.push(7)); //returns length of push so o/p:1
+        console.log('push: '+arr.push(8)); //o/p: 2
+        console.log(arr); // [] empty array
+        for(let i =0; i<6; i++){
+            arr[i] = arr.push(i);
+        }
+        console.log(arr);
+         // console.log(arr.length);
+
+         //notice;
+         //the push always returns the lenght and pop always return what it has popped.
+         //in a statement of push and pop being as index or value..always consider from going from right and left..
+         //arr[index]=value;  this gonna be done when we are doing with push and pop.
+        </script>
+</body>
+</html>

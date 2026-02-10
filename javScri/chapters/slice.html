@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice and splice</title>
+</head>
+<body>
+    <script>
+        let arr = [23,45,67,89,90,100];
+        // console.log(arr.slice(2,4));
+        //arr.slice(2,4); //no output.
+        console.log(arr.slice(2,4));  //[67,89]
+        //slice doesnt chnage array it returns new array.
+        //syntax: arrayname.slice(startIndex,endIndex) the endINdex is not included.
+        //its copy and non destructive.
+        //----------------------------------------------------------------
+
+        //splice
+        let brr = [45,67,25,99,12,36,78];
+        console.log(brr);
+
+        // brr.splice(2,3);    //[45, 67, 36, 78]
+        // console.log(brr);
+
+       // console.log(brr.splice(2,3));
+          //[25,99,12]
+
+        brr.splice(2,0,4); //add 4 at 2nd index remove nothing.
+
+        brr.splice(2,2,99); //replace 2index with 99
+        console.log(brr);
+
+        </script>
+</body>
+</html>

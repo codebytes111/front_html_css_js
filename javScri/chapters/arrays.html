@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <p id="textget"></p>
+    <script>
+
+        let numbers = [1,2,3,4,5,6];
+        console.log(typeof numbers)
+        //document.querySelector('#textget').innerText =numbers;
+        console.log(numbers);
+        console.log(numbers[0]);
+      //  console.log(numbers[5]);
+        console.log("length: "+numbers.length)
+
+        for(let i =0 ; i < numbers.length; i++){
+            console.log(numbers[i]);
+        }
+
+        let a = [1,true,null,'asrf'];
+        console.log(a[2]);
+        console.log(typeof a); //object
+        console.log(Array.isArray(a));
+
+        let obj = {
+            name : 'john',
+        };
+        console.log(Array.isArray(obj));
+        </script>
+</body>
+</html>
